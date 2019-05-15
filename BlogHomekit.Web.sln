@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Web", "BlogHomekit.Web\BlogHomekit.Web.csproj", "{323109D7-07CB-4A80-9281-B92AB68F2C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Model", "BlogHomekit.Model\BlogHomekit.Model.csproj", "{DD10E7CE-CB8D-4D77-ABC1-3686B3ECD157}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogHomekit.Model", "BlogHomekit.Model\BlogHomekit.Model.csproj", "{DD10E7CE-CB8D-4D77-ABC1-3686B3ECD157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Datos", "BlogHomekit.Datos\BlogHomekit.Datos.csproj", "{0502D3CE-3553-4861-A9DF-03A855E548BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DD10E7CE-CB8D-4D77-ABC1-3686B3ECD157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD10E7CE-CB8D-4D77-ABC1-3686B3ECD157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD10E7CE-CB8D-4D77-ABC1-3686B3ECD157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0502D3CE-3553-4861-A9DF-03A855E548BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0502D3CE-3553-4861-A9DF-03A855E548BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0502D3CE-3553-4861-A9DF-03A855E548BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0502D3CE-3553-4861-A9DF-03A855E548BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
