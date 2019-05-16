@@ -7,7 +7,7 @@ namespace BlogHomekit.Model
     {
         public Post()
         {
-            Tags = List<Tag>();
+            Tags = new List<Tag>();
 
         }
         public int Id { get; set; }
