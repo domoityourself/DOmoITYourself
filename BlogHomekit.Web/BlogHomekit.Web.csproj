@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImagesController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\TagsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -255,7 +256,6 @@
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
-    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
     <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
@@ -312,7 +312,6 @@
     <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
     <Content Include="Scripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
     <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
-    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
     <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.css" />
     <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
     <Content Include="Scripts\ckeditor\plugins\copyformatting\cursors\cursor-disabled.svg" />
@@ -453,14 +452,11 @@
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
-    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ro.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
-    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
-    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sr.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
     <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
@@ -481,7 +477,6 @@
     <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
     <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
     <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
-    <Content Include="Scripts\ckeditor\plugins\widget\images\handle.png" />
     <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
     <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
     <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
@@ -531,7 +526,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -561,6 +558,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -583,6 +581,10 @@
     <ProjectReference Include="..\BlogHomekit.Model\BlogHomekit.Model.csproj">
       <Project>{cdf6a23a-34a3-4ebd-8075-d44c1fccd657}</Project>
       <Name>BlogHomekit.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BlogHomekit.Services\BlogHomekit.Services.csproj">
+      <Project>{948e96ed-ec51-4a27-a14e-cb16b70f5c7b}</Project>
+      <Name>BlogHomekit.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

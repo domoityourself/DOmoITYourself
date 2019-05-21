@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Model", "BlogHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Datos", "BlogHomekit.Datos\BlogHomekit.Datos.csproj", "{4583D679-8C27-4709-8A3D-9E8904794C02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogHomekit.Services", "BlogHomekit.Services\BlogHomekit.Services.csproj", "{948E96ED-EC51-4A27-A14E-CB16B70F5C7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{4583D679-8C27-4709-8A3D-9E8904794C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4583D679-8C27-4709-8A3D-9E8904794C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4583D679-8C27-4709-8A3D-9E8904794C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948E96ED-EC51-4A27-A14E-CB16B70F5C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948E96ED-EC51-4A27-A14E-CB16B70F5C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948E96ED-EC51-4A27-A14E-CB16B70F5C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948E96ED-EC51-4A27-A14E-CB16B70F5C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
