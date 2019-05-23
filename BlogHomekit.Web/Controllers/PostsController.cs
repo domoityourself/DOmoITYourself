@@ -40,7 +40,12 @@ namespace BlogHomekit.Web.Controllers
         // GET: Posts/Create
         public ActionResult Create()
         {
-            return View();
+            Post viewPost;
+            viewPost = new Post
+            {
+            };
+
+            return View(viewPost);
         }
 
         // POST: Posts/Create
