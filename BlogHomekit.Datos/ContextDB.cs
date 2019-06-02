@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using BlogHomekit.Model;
+using BlogHomekit.Model.Posts;
 
 
 namespace BlogHomekit.Datos

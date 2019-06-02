@@ -1,4 +1,7 @@
-﻿@{
+﻿@using BlogHomekit.Web.Helpers
+@model BlogHomekit.ViewModels.Blog.BlogPostsSummaryList 
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -53,5 +56,6 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
+    @Html.Partial("_PartialListPost",Model.PostsSummaryList.ToList())
 
 </div>

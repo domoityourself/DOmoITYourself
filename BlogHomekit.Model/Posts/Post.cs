@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace BlogHomekit.Model
+namespace BlogHomekit.Model.Posts
 {
     public class Post
     {
@@ -20,12 +20,16 @@ namespace BlogHomekit.Model
             Tags = new List<Tag>();
 
         }
+
         public int Id { get; set; }
 
         public string Titulo { get; set; }
 
         [AllowHtml]
         public string Subtitulo { get; set; }
+
+        [AllowHtml]
+        public string Portada { get; set; }
         
         public string UrlSlug { get; set; }        
         

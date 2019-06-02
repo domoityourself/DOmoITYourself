@@ -8,7 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BlogHomekit.Datos;
-using BlogHomekit.Model;
+using BlogHomekit.Model.Posts;
 
 namespace BlogHomekit.Web.Controllers
 {
