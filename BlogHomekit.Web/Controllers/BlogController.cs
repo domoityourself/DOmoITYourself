@@ -9,14 +9,14 @@ using BlogHomekit.Services;
 
 namespace BlogHomekit.Web.Controllers
 {
-    public class HomeController : Controller
+    public class BlogController : Controller
     {
 
         private readonly ServiceBlog _ServiceBlog;
 
         private readonly ContextDB _db;
 
-        public HomeController()
+        public BlogController()
         {
             _db = new ContextDB();
             _ServiceBlog = new ServiceBlog(_db);

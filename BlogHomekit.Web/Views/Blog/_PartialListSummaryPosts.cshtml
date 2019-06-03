@@ -2,15 +2,15 @@
 
 @model IList<BlogHomekit.Model.Posts.PostSummary>
 
+<div class="row">
+    @foreach (var item in Model)
+    {
 
-@foreach (var item in Model)
-{
-    <h2>
-        <a href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">@item.Titulo</a>
-    </h2>
-    @Html.Raw(item.Subtitulo)
-    <br />
-    <a class="readMore" href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">
-        Leer Mas
-    </a>
-}
+        <div class="col-md-4">
+            <h2><a href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">@item.Titulo</a></h2>
+            @Html.Raw(item.Subtitulo)
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="readMore" href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)"> Leer Mas </a></p>
+        </div>
+    }
+</div>

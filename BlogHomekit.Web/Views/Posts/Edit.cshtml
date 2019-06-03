@@ -1,6 +1,4 @@
 ﻿@model BlogHomekit.Model.Posts.Post
-@Page.ValidateRequest = false
-
 @{
     ViewBag.Title = "Edit";
 }
@@ -17,8 +15,6 @@
 <div class="form-horizontal">
     <h4>Post</h4>
     <hr />
-    @*@Html.ValidationSummary(true, "", new { @class = "text-danger" })*@
-    @Page.ValidateRequest = false
     @Html.EditorFor(m => m, "EditorPost")
 
     <div class="form-group">
