@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dtos\PostDto.cs" />
     <Compile Include="Posts\Post.cs" />
     <Compile Include="Posts\PostExtensions.cs" />
     <Compile Include="Posts\PostSummary.cs" />
