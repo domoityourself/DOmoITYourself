@@ -607,6 +607,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Shared\_PartialListPost.cshtml" />
     <Content Include="Views\Blog\_PartialListSummaryPosts.cshtml" />
+    <Content Include="Views\Blog\_PartialCoverPost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

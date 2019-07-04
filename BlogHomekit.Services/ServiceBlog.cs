@@ -31,7 +31,7 @@ namespace BlogHomekit.Services
                 .Published()
                 .SelectPostSummaryLine()
                 .OrderByDescending(m => m.FechaPost)
-                .Take(3)
+                .Take(PostsNumber)
                 .ToListAsync();
         }
     }

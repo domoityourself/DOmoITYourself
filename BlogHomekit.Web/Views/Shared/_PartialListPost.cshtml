@@ -4,12 +4,14 @@
 
 @foreach (var item in Model)
 {
-    <h2>
-        <a href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">@item.Titulo</a>
-   </h2>
-   @Html.Raw(item.Subtitulo)
-    <br/>
-    <a class="readMore" href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">
-        Leer Mas
-    </a>
+    <div>
+        <h2>
+            <a href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">@item.Titulo</a>
+        </h2>
+        @Html.Raw(item.Subtitulo)
+        <br />
+        <a class="readMore" href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">
+            Leer Mas
+        </a>
+    </div>
 }

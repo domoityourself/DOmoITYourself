@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Dtos\PostDto.cs" />
     <Compile Include="Posts\Post.cs" />
+    <Compile Include="Posts\PostCover.cs" />
     <Compile Include="Posts\PostExtensions.cs" />
     <Compile Include="Posts\PostSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

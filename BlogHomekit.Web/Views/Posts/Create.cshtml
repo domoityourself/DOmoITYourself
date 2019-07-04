@@ -14,26 +14,30 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>Post</h4>
-    <hr />
-    
-    @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })
-    @Html.ValidationMessageFor(model => model.ContenidoHTML, "", new { @class = "text-danger" })*@
-    @Html.EditorFor(m => m, "EditorPost")
+    <div class="form-horizontal">
+        <blockquote class="blockquote text-center">
+            <div class="p-3 mb-2 bg-secondary text-white">
+                <h1>Create Post</h1>
+            </div>
+        </blockquote>
+        <hr />
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-outline-dark" />
-            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
+        @*@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            @Html.ValidationMessageFor(model => model.ContenidoHTML, "", new { @class = "text-danger" })*@
+        @Html.EditorFor(m => m, "EditorPost")
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-outline-dark" />
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-dark" })
+            </div>
         </div>
     </div>
-</div>
 }
 
 @*<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>*@
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

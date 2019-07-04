@@ -26,19 +26,14 @@ namespace BlogHomekit.Model.Posts
 
         public string Titulo { get; set; }
 
-        //[AllowHtml]
         public string Subtitulo { get; set; }
 
-        //[AllowHtml]
         public string Portada { get; set; }
 
         public string UrlSlug { get; set; }
 
-        //[AllowHtml]
         public string ContenidoHTML { get; set; }
 
-        //[AllowHtml]
-        //[Display(Name = "Link Video")]
         public string LinkVideo { get; set; }
 
         public bool EsBorrador { get; set; }
@@ -53,9 +48,7 @@ namespace BlogHomekit.Model.Posts
 
         public virtual ICollection<Tag> Tags { get; set; }
         public bool EsPublico => !EsBorrador && FechaPublicacion <= DateTime.Now;
-
-
-
+        
 
         public void CopyValues(PostDto postDto)
         {

@@ -1,16 +1,30 @@
 ﻿@using BlogHomekit.Web.Helpers
 
 @model IList<BlogHomekit.Model.Posts.PostSummary>
+<div class="container-fluid">
+    <div class="row h-100 d-flex">
 
-<div class="row">
-    @foreach (var item in Model)
-    {
-
-        <div class="col-md-4">
-            <h2><a href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)">@item.Titulo</a></h2>
-            @Html.Raw(item.Subtitulo)
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="readMore" href="@Url.PathUrlPost(item.FechaPost,item.UrlSlug)"> Leer Mas </a></p>
+        <div class="jumbotron jumbotron-fluid" style="width:100%">
+            <h1><a href="@Url.PathUrlPost(Model.ElementAt(0).FechaPost, Model.ElementAt(0).UrlSlug)">@Model.ElementAt(0).Titulo</a></h1>
+            @Html.Raw(Model.ElementAt(0).Portada)
+            @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
         </div>
-    }
+        <br /><br />
+        @{int i = 0;}
+        @foreach (var item in Model)
+        {
+            if (i > 0)
+            {
+                <div class="col-md-4">
+                    <h2><a href="@Url.PathUrlPost(item.FechaPost, item.UrlSlug)">@item.Titulo</a></h2>
+                    @Html.Raw(item.Subtitulo)
+
+                </div>
+
+            }
+            i = i + 1;
+        }
+
+
+    </div>
 </div>

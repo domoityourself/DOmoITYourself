@@ -21,10 +21,11 @@ namespace BlogHomekit.Web.Controllers
 
         private readonly ServicePost _servicePost;
 
-        public PostsController() : this(new ContextDB()) {
+        public PostsController() : this(new ContextDB())
+        {
         }
 
-        public PostsController(ContextDB Context):
+        public PostsController(ContextDB Context) :
             this(new ServicePost(Context))
         { }
 
@@ -55,15 +56,9 @@ namespace BlogHomekit.Web.Controllers
             return View(post);
         }
 
-        // GET: Posts/Create
-        //public ActionResult Create()
-        //{
-        //   return View(Post.CreateNewPost());
-        //}
 
         public ActionResult Create()
         {
-            //return View(new EditPostViewModel(Post.CreateNewPost()));
             var viewModel = new EditPostViewModel(new Post())
             {
                 EditPost = new EditPost(Post.CreateNewPost())
@@ -76,14 +71,10 @@ namespace BlogHomekit.Web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(EditPostViewModel post)
-        //public async Task<ActionResult> Create([Bind(Include = "Id,Subtitulo,Titulo,UrlSlug,Portada,FechaPost,ContenidoHTML,EsBorrador,FechaPublicacion,Autor")] Post post)
+        public async Task<ActionResult> Create(EditPostViewModel post)        
         {
             if (ModelState.IsValid)
             {
-                //    db.Posts.Add(post);
-                //    await db.SaveChangesAsync();
-                //    return RedirectToAction("Index");
                 await _servicePost.CreatePost(post.ToDto());
             }
 
@@ -117,18 +108,14 @@ namespace BlogHomekit.Web.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public async Task<ActionResult> Edit([Bind(Include = "Id,Subtitulo,Titulo,UrlSlug,FechaPost,ContenidoHTML,EsBorrador,FechaPublicacion,Autor")] Post post)
-          public async Task<ActionResult> Edit(EditPostViewModel post)
+        public async Task<ActionResult> Edit(EditPostViewModel post)
         {
             if (ModelState.IsValid)
 
             {
-                //db.Entry(post).State = EntityState.Modified;
-                //await db.SaveChangesAsync();
                 await UpdatePost(post.ToDto());
-                //return RedirectToAction("Index");
             }
-            //return View(post);
+
             return View(post);
         }
 
@@ -168,11 +155,7 @@ namespace BlogHomekit.Web.Controllers
         }
         private async Task UpdatePost(PostDto postDto)
         {
-           await _servicePost.UpdatePost(postDto);
+            await _servicePost.UpdatePost(postDto);
         }
-        //private async Task CreatePost(EditPost editorPost)
-        //{
-        //    await _servicePost.CreatePost()
-        //}
     }
 }

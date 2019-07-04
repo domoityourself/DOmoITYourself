@@ -36,7 +36,7 @@ namespace BlogHomekit.Web.Controllers
         {
             return new BlogPostsSummaryList
             {
-                PostsSummaryList = await _ServiceBlog.GetPostSummariesPublished(6)
+                PostsSummaryList = await _ServiceBlog.GetPostSummariesPublished(7)
             };
         }
 
